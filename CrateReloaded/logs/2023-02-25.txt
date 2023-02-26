@@ -1,0 +1,4 @@
+feb. 25, 2023 12:53:46 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: Vote40, Rewards: [
+    Commands: [/eco give {player} 160000]
+]

@@ -1,0 +1,44 @@
+sep. 22, 2022 4:18:19 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: Vote40, Rewards: [
+    Commands: [/give {player} iron_ingot 64, msg {player} has ganado §f§l64 Lingotes de hierro §fcomo recompensa diaria]
+]
+sep. 22, 2022 4:18:23 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: Vote40, Rewards: [
+    Commands: [/give {player} diamond_block 64]
+]
+sep. 22, 2022 4:18:27 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: Vote40, Rewards: [
+    Commands: [/eco give {player} 10000, /msg {player} has ganado §2$10,000 §fpesos como recompensa diaria!]
+]
+sep. 22, 2022 4:25:16 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: Vote40, Rewards: [
+    Commands: [/give {player} lapis_lazuli 64, msg {player} has ganado §1§l64 Lapislazuli §fcomo recompensa diaria]
+]
+sep. 22, 2022 4:25:18 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: Vote40, Rewards: [
+    Commands: [/exp give {player} 10l, /msg {player} has ganado §e10 Niveles de XP!]
+]
+sep. 22, 2022 4:25:23 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: Vote40, Rewards: [
+    Commands: [/give {player} trident 1 durability:30 impaling:50 channeling:10 riptide:3 name:§bTridente_de_Aquaman lore:§5Ganado_como_recompensa_al|§5votar_por_el_servidor|§2Survival_§4Rolemine||§bCiudades_OP]
+]
+sep. 22, 2022 4:25:34 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: Vote40, Rewards: [
+    Commands: [/exp give {player} 10l, /msg {player} has ganado §e10 Niveles de XP!]
+]
+sep. 22, 2022 4:25:36 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: Vote40, Rewards: [
+    Commands: [/give {player} lapis_lazuli 64, msg {player} has ganado §1§l64 Lapislazuli §fcomo recompensa diaria]
+]
+sep. 22, 2022 4:25:38 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: Vote40, Rewards: [
+    Commands: [/give {player} emerald 64]
+]
+sep. 22, 2022 4:25:41 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: Vote40, Rewards: [
+    Commands: [/exp give {player} 40l, /msg {player} has ganado §e40 Niveles de XP!]
+]
+sep. 22, 2022 4:25:43 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: Vote40, Rewards: [
+    Commands: [/give {player} diamond_shovel 1 efficiency:40 durability:40 silk_touch:1 name:§2Pala_Sedosa_Vote40 lore:§5Ganado_como_recompensa_al|§5votar_por_el_servidor|§2Survival_§4Rolemine||§bCiudades_OP]
+]

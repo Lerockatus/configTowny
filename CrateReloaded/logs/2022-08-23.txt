@@ -1,0 +1,7 @@
+ago. 23, 2022 7:09:52 P. M. crate.cn A
+INFO: Player: Lerockatus, Crate: FoodKey, Rewards: [
+    Commands: [heal {player}]
+    Items: [ItemStack{SNOW x 1}]
+    Items: [ItemStack{CAKE x 1, UNSPECIFIC_META:{meta-type=UNSPECIFIC, display-name={"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"The cake is a lie!"}],"text":""}}}]
+    Items: [ItemStack{MELON_SLICE x 1}]
+]

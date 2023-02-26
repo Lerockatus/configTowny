@@ -1,0 +1,419 @@
+############################################
+# +---------------------------------------+#
+# |         Config Revision 17            |#
+# +---------------------------------------+#
+############################################
+
+# -------------------------------------------------------------------------------------------------------------------
+# CRATE FINAL PARA ROLEMINE (LERO)
+Vote40:
+    type: KEYCRATE
+    item: 'TRIPWIRE_HOOK 1 name:&2[_&aLlave_&eVote40_&2] lore:&7Gracias_por_votar.|&aHaz_clic_derecho_en_el_cofre|&apara_cobrar_tu_recompensa!|&ave_a_&b/warp_crates.||&bCiudades_OP glow:true'
+    animation: 'none'
+    display-name: '&2[ &aRecompensas &bVote40 &2]'
+    holographic:
+        - '{crate-name}'
+        - '{lore:1}'
+    confirmation:
+        enabled: true
+        accept-button: 'ENDER_CHEST 1 name:&aSí lore:&fHaz_click_para_abrir_&b&l{crate}!'
+        decline-button: 'BARRIER 1 name:&4No lore:&cHaz_click_para_cerrar_&b&l{crate}!'
+    preview:
+        enabled: true
+        rows: 7
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        open: '&e{player} cobraste una recompensa en el cofre &b&l{crate}'
+        broadcast: '&6&l{player} &bha dado un voto para el servidor y ha recibido su recompensa que esperas para obtener la tuya.'
+        #broadcast: '/crbc {player} {crate-name} &bha dado un voto para el servidor graciasy ha recibido su recompensa que esperas para obtener la tuya.'
+    effect:
+        1:
+          class: Cube
+          category: PERSISTENT
+          radius: 3
+          particles: 8
+        2:
+          class: Sound
+          sound: ENTITY_ELDER_GUARDIAN_CURSE
+          CATEGORY: OPEN
+        3:
+          class: Sound
+          sound: ENTITY_ENDERMEN_SCREAM
+          CATEGORY: END
+    reward:
+        minimum-rewards: 1
+        maximum-rewards: 1
+        rewards:
+            #ESTA SECCIÓN SE DA LA XP Y LA MONEY
+            - 'cmd:(/exp give {player} 10l),unique:(),chance:(32),display:(experience_bottle 1 name:&f10_Niveles_de_XP! lore:_|&8Rareza:_&F&lCOMÚN|_|&r&eGana_10_nivel_de_XP!|&2Con_esto_puedes_encantar|&2o_reparar_tus_items_gastados glow:true), cmd:(msg {player} has ganado &e10 Niveles de XP!)'
+            - 'cmd:(/exp give {player} 20l),unique:(),chance:(30),display:(experience_bottle 1 name:&f20_Niveles_de_XP! lore:_|&8Rareza:_&3&lPARTICULAR|_|&r&eGana_20_nivel_de_XP!|&2Con_esto_puedes_encantar|&2o_reparar_tus_items_gastados glow:true), cmd:(msg {player} has ganado &e20 Niveles de XP!)'
+            - 'cmd:(/exp give {player} 40l),unique:(),chance:(28),display:(experience_bottle 1 name:&f40_Niveles_de_XP! lore:_|&8Rareza:_&9&lÉPICA|_|&r&eGana_40_nivel_de_XP!|&2Con_esto_puedes_encantar|&2o_reparar_tus_items_gastados glow:true), cmd:(msg {player} has ganado &e40 Niveles de XP!)'
+            - 'cmd:(/exp give {player} 60l),unique:(),chance:(26),display:(experience_bottle 1 name:&f60_Niveles_de_XP! lore:_|&8Rareza:_&9&lÉPICA|_|&r&eGana_80_nivel_de_XP!|&2Con_esto_puedes_encantar|&2o_reparar_tus_items_gastados glow:true), broadcast:(&aFelicidades a &l{player} &agano &e60 Niveles de XP! &acomo recompensa diaria.)'
+            - 'cmd:(/eco give {player} 10000),unique:(),chance:(31),display:(map 1 name:&f$10,000_Pesos! lore:_|&8Rareza:_&F&lCOMÚN|_|&r&eGana_$10_mil_varos!|&2Con_esto_puedes_comprar|&2items_en_warp_mercado_o|&2a_otros_jugadores glow:true), cmd:(msg {player} has ganado &2$10,000 &fpesos como recompensa diaria!)'
+            - 'cmd:(/eco give {player} 20000),unique:(),chance:(29),display:(map 1 name:&f$20,000_Pesos! lore:_|&8Rareza:_&F&lCOMÚN|_|&r&eGana_$16_mil_varos!|&2Con_esto_puedes_comprar|&2items_en_warp_mercado_o|&2a_otros_jugadores glow:true), cmd:(msg {player} has ganado &2$20,000 &fpesos como recompensa diaria!)'
+            - 'cmd:(/eco give {player} 40000),unique:(),chance:(27),display:(map 1 name:&f$40,000_Pesos! lore:_|&8Rareza:_&3&lPARTICULAR|_|&r&eGana_$64_mil_varos!|&2Con_esto_puedes_comprar|&2items_en_warp_mercado_o|&2a_otros_jugadores glow:true), cmd:(msg {player} has ganado &2$40,000 &fpesos como recompensa diaria!)'
+            - 'cmd:(/eco give {player} 80000),unique:(),chance:(25),display:(map 1 name:&f$80,000_Pesos! lore:_|&8Rareza:_&9&lÉPICA|_|&r&eGana_$85_mil_varos!|&2Con_esto_puedes_comprar|&2items_en_warp_mercado_o|&2a_otros_jugadores glow:true), cmd:(msg {player} has ganado &2$80,000 &fpesos como recompensa diaria!)'
+            - 'cmd:(/eco give {player} 160000),unique:(),chance:(23),display:(map 1 name:&f$160K_Pesos! lore:_|&8Rareza:_&5&lMISTICA|_|&r&eGana_$160_mil_varos!|&2Con_esto_puedes_comprar|&2items_en_warp_mercado_o|&2a_otros_jugadores glow:true), broadcast:(&aFelicidades a &l{player} &agano &e$160,000 pesos! &acomo recompensa diaria.)'
+            #ESTA SECCIÓN DE BLOQUES Y MINERALES
+            - 'cmd:(/give {player} iron_ingot 64),unique:(),chance:(20),display:(iron_ingot 64 name:&fLingotes_de_hierro lore:_|&8Rareza:_&f&lCOMÚN|_|&2Gana_64_lingotes_de_hierro|&2podrás_hacer_herramientas|&2armaduras_y_otras_cosas_más|&2también_puedes_venderlo_en|&2/warp_mercado_o_también_con|&2el_comando:_&b/sell_ironigot|_|Revisa_tu_libro_de_recetas.|_|&bCiudades_OP glow:false), cmd:(msg {player} has ganado &f&l64 Lingotes de hierro &fcomo recompensa diaria)'
+            - 'cmd:(/give {player} gold_ingot 64),unique:(),chance:(18),display:(gold_ingot 64 name:&6Lingotes_de_oro lore:_|&8Rareza:_&F&lCOMÚN|_|&2Gana_64_lingotes_de_oro|&2podrás_hacer_herramientas|&2armaduras_y_otras_cosas_má|&2también_puedes_venderlo_en|&2/warp_mercado_o_también_con|&2el_comando:_&b/sell_goldingot|_|Revisa_tu_libro_de_recetas.|_|&bCiudades_OP glow:false), cmd:(msg {player} has ganado &6&l64 Lingotes de oro &fcomo recompensa diaria)'
+            - 'cmd:(/give {player} lapis_lazuli 64),unique:(),chance:(16),display:(lapis_lazuli 64 name:&1Lapis_Lazuli lore:_|&8Rareza:_&3&lPARTICULAR|_|&2Gana_64_lapis_lazuli|&2podrás_encantar_herramientas|&2armaduras_o_hacer_tinte_azul|&2para_teñir_cuero_lana_vidrio|&2o_también_puedes_venderlo_en|&2/warp_mercado_o_también_con|&2el_comando:_&b/sell_lapislazuli|_|Revisa_tu_libro_de_recetas.|_|&bCiudades_OP glow:false), cmd:(msg {player} has ganado &1&l64 Lapislazuli &fcomo recompensa diaria)'
+            - 'cmd:(/give {player} diamond 64),unique:(),chance:(14),display:(diamond 64 name:&bDiamantes lore:_|&8Rareza:_&3&lPARTICULAR|_|&2Gana_64_diamantes_con_ellos|&2podrás_hacer_herramientas|&2armaduras_tradeos_espadas|&2o_también_puedes_venderlo_en|&2en_la_casa_de_subastas_con|&2el_comando:_&b/ah_sell_precio|&2con_el_item_en_mano|_|Revisa_tu_libro_de_recetas.|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó &b64 Diamantes &acomo recompensa diaria)'
+            - 'cmd:(/give {player} emerald 64),unique:(),chance:(12),display:(emerald 64 name:&aEsmeraldas lore:_|&8Rareza:_&9&lÉPICA|_|&2Gana_64_esmeraldas_con_ellos|&2podrás_hacer_tradeos|&2o_también_puedes_venderlo_en|&2en_la_casa_de_subastas_con|&2el_comando:_&b/ah_sell_precio|&2con_el_item_en_mano|_|Revisa_tu_libro_de_recetas.|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó &a64 Esmeraldas &acomo recompensa diaria)'
+            - 'cmd:(/give {player} coal_block 64),unique:(),chance:(20),display:(coal_block 64 name:&8Bloque_de_Carbón lore:_|&8Rareza:_&F&lCOMÚN|_|&2Gana_64_Bloques_de_carbón|&2podrás_hacer_crafteos|&2o_tradeos_con_aldeanos|&2o_venderlo_en_/warp_mercado|_|Revisa_tu_libro_de_recetas glow:false), cmd:(msg {player} has ganado &8&l64 Bloques de carbon &fcomo recompensa diaria)'
+            - 'cmd:(/give {player} iron_block 64),unique:(),chance:(18),display:(iron_block 64 name:&fBloque_de_hierro lore:_|&8Rareza:_&F&lCOMÚN|_|&2Gana_64_boques_de_hierro|&2podrás_hacer_herramientas|&2armaduras_y_otras_cosas_más|&2también_puedes_venderlo_en|&2con_el_comando:_&b/sell_ironblock|_|Revisa_tu_libro_de_recetas.|_|&bCiudades_OP glow:false), cmd:(msg {player} has ganado &f&l64 Bloques de hierro &fcomo recompensa diaria)'
+            - 'cmd:(/give {player} gold_block 64),unique:(),chance:(16),display:(gold_block 64 name:&6Bloque_de_oro lore:_|&8Rareza:_&F&lCOMÚN|_|&2Gana_64_bloques_de_oro|&2podrás_hacer_herramientas|&2armaduras_y_otras_cosas_má|&2también_puedes_venderlo_en|&2/warp_mercado_o_también_con|&2el_comando:_&b/sell_goldblock|_|Revisa_tu_libro_de_recetas.|_|&bCiudades_OP glow:false), cmd:(msg {player} has ganado &6&l64 Bloques de oro &fcomo recompensa diaria)'
+            - 'cmd:(/give {player} lapis_block 64),unique:(),chance:(14),display:(lapis_block 64 name:&1Bloque_de_Lapislazuli lore:_|&8Rareza:_&3&lPARTICULAR|_|&2Gana_64_bloques_de_lapislazuli|&2podrás_encantar_herramientas|&2armaduras_o_hacer_tinte_azul|&2para_teñir_cuero_lana_vidrio|&2o_también_puedes_venderlo_en|&2/warp_mercado_o_también_con|&2el_comando:_&b/sell_lapisblock|_|Revisa_tu_libro_de_recetas.|_|&bCiudades_OP glow:false), cmd:(msg {player} has ganado &1&l64 Bloques de Lapislazuli &fcomo recompensa diaria)'
+            - 'cmd:(/give {player} redstone_block 64),unique:(),chance:(12),display:(redstone_block 64 name:&4Bloque_de_Redstone lore:_|&8Rareza:_&3&lPARTICULAR|_|&2Gana_64_Bloques_de_redstone|&2con_ellos_podrás_hacer|&2mecanismos_o_venderlos_en|&2/warp_mercado_o_también_con|&2el_comando:_&b/sell_redstoneblock|_|Revisa_tu_libro_de_recetas.|_|&bCiudades_OP glow:false), cmd:(msg {player} has ganado &4&l64 Bloques de redstone &fcomo recompensa diaria)'
+            - 'cmd:(/give {player} diamond_block 64),unique:(),chance:(10),display:(diamond_block 64 name:&bBloque_de_diamantes lore:_|&8Rareza:_&3&lPARTICULAR|_|&2Gana_64_diamantes_con_ellos|&2podrás_hacer_herramientas|&2armaduras_tradeos_espadas|&2o_también_puedes_venderlo_en|&2en_la_casa_de_subastas_con|&2el_comando:_&b/ah_sell_precio|&2con_el_item_en_mano|_|Revisa_tu_libro_de_recetas.|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó &b64 Bloques de diamantes &acomo recompensa diaria)'
+            - 'cmd:(/give {player} emerald_block 64),unique:(),chance:(8),display:(emerald_block 64 name:&aBloque_de_esmeraldas lore:_|&8Rareza:_&9&lÉPICA|_|&2Gana_64_bloques_de_esmeraldas|&2con_ellos_podrás_hacer_tradeos|&2o_también_puedes_venderlo_en|&2en_la_casa_de_subastas_con|&2el_comando:_&b/ah_sell_precio|&2con_el_item_en_mano|_|Revisa_tu_libro_de_recetas.|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó &a64 Bloques de esmeraldas &acomo recompensa diaria)'
+            - 'cmd:(/give {player} ancient_debris 4),unique:(),chance:(3),display:(ancient_debris 4 name:&eEscombros_Ancestrales lore:_|&8Rareza:_&5&lMÍSTICA|_|&2Gana_4_bloque_de_Escombros_ansestrales|&2fundelas_en_un_alto_horno_para_obtener|&2los_tan_preciados_fragmentos_de_netherita|_|Revisa_tu_libro_de_recetas|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó &e4 Escombros ancestrales &acomo recompensa diaria)'
+            - 'cmd:(/give {player} shulker_shell 2),unique:(),chance:(3),display:(shulker_shell 2 name:&dCaparazón_de_Shulker lore:_|&8Rareza:_&9&lÉPICA|_|&2Gana_2_Caparazones_de_Shulker|&2juntalas_con_un_cofre_para_obtener|&2esas_cajitas_coquetas_con_tecnología_|&2de_la_dimension_del_END|_|Revisa_tu_libro_de_recetas|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó &d2 Caparazones de Shulker &acomo recompensa diaria)'
+            #ESTA SECCION DE OBJETOS Y HERRAMIENTAS
+            - 'cmd:(/give {player} shears 1 efficiency:40 durability:40 name:&3Tijeras_Vote40 lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(5),display:(shears 1 efficiency:40 durability:40 name:&3Tijeras_Vote_40 lore:_|&6&LRareza:&5&lMÍSTICA|_|&2Gana_1_Tijeras_Vote40_y_trasquila|&2a_tus_borregas_poda_arboles_arbustos|&2corta_todo_como_ella/el|&2corto_contigo_por_feo|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &3Tijeras Vote40 &acomo recompensa diaria)'
+            - 'cmd:(/give {player} shield 1 durability:30 mending:1 name:&2Escudo_Corazón_de_Roble lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(5),display:(shield 1 durability:30 mending:1 name:&2Escudo_Corazón_de_Roble lore:_|&6&LRareza:&9&lÉPICA|_|&2Gana_1_Escudo_y_protegete_de|&2tus_enemigos_enemigos|&2recomendada_para_pelear|&2contra_Esqueletos_o_arqueros|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &2Escudo Corazón de Roble &acomo recompensa diaria)'
+            - 'cmd:(/give {player} crossbow 1 piercing:30 quick_charge:5 durability:20 multishot:1 name:&5Ballesta_de_Daryl lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(5),display:(crossbow 1 piercing:30 quick_charge:5 durability:20 multishot:1 name:&5Ballesta_de_Daryl lore:_|&6&LRareza:&5&lMISTICA|_|&2Gana_1_Ballesta_OP_extermina_a|&2tus_enemigos_recomendada_para_pelear|&2contra_invasiones_saqueadores_ratones|&2o_todo_aquel_insecto_que_ose_molestar|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &5Ballesta de Daryl &acomo recompensa diaria)'
+            - 'cmd:(/give {player} trident 1 durability:30 loyalty:30 impaling:50 channeling:10 name:&bTridente_de_Poseidon lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(3),display:(trident 1 durability:30 loyalty:30 impaling:50 channeling:30 name:&bTridente_de_Poseidon lore:_|&6&LRareza:&5&lMISTICA|_|&2Gana_1_Tridente_de_Poseidon|&2eres_el_señor_de_los_mares_mata_a|&2tus_enemigos_recomendada_para_pelear|&2contra_ahogados_guardianes_y_a|&2todo_aquel_insecto_que_ose_molestar|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &bTridente de Poseidon &acomo recompensa diaria)'
+            - 'cmd:(/give {player} trident 1 durability:30 impaling:50 channeling:10 riptide:3 name:&bTridente_de_Aquaman lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(3),display:(trident 1 durability:30 impaling:50 riptide:3 channeling:30 name:&bTridente_de_Acuaman lore:_|&6&LRareza:&5&lMISTICA|_|&2Gana_1_Tridente_de_Aquaman|&2surfea_los_mares_con_la_velocidad|&2de_propulsión_a_chorro_mata|&2a_todo_aquel_insecto_que_ose_molestar|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &bTridente de Acuaman &acomo recompensa diaria)'
+            - 'cmd:(/give {player} flint_and_steel 1 durability:30 name:&6Mechero_Bunsent lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(5),display:(flint_and_steel 1 durability:40 name:&6Mechero_Bunsent lore:_|&6&LRareza:&5&lMÍSTICA|_|&2Gana_1_Mechero_Bunsent_y_enciende|&2todo_lo_que_puedas_o_materiales|&2que_quieras_quemar_cuidado|&2si_eres_piromaniáco_mejor_no_usar|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &6Mechero_Bunsent &acomo recompensa diaria)'
+            #ESTA SECCION DE ARMADURAS Y HERRAMIENTAS SENCILLAS
+            - 'cmd:(/give {player} diamond_pickaxe 1 efficiency:40 durability:40 fortune:3 name:&aPico_Suertudo_Vote40 lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(3),display:(diamond_pickaxe 1 efficiency:40 durability:40 fortune:3 name:&aPico_Suertudo_Vote40 lore:_|&6&LRareza:&5&lMÍSTICA|_|&2Gana_1_Pico_Suertuda_vote40|&2ideal_para_minerales_como|&2carbon_diamante_esmeralda|&2redstone_oro_del_nether|&2recomendada_para_la_Mineria|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &aPico Suertudo Vote40 &acomo recompensa diaria)'
+            - 'cmd:(/give {player} diamond_axe 1 efficiency:40 durability:40 fortune:3 name:&aHacha_Suertuda_Vote40 lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(3),display:(diamond_axe 1 efficiency:40 durability:40 fortune:3 name:&aHacha_Suertuda_Vote40 lore:_|&6&LRareza:&5&lMÍSTICA|_|&2Gana_1_Hacha_Suertuda_vote40|&2ideal_para_talar_bosques_enteros|&2bosques_carmesi_y_distosionados|&2recomendada_para_Leñadores|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &aHacha Suertuda Vote40 &acomo recompensa diaria)'
+            - 'cmd:(/give {player} diamond_shovel 1 efficiency:40 durability:40 fortune:3 name:&aPala_Suertuda_Vote40 lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(5),display:(diamond_shovel 1 efficiency:40 durability:40 fortune:3 name:&aPala_Suertuda_Vote40 lore:_|&6&LRareza:&5&lMÍSTICA|_|&2Gana_1_Pala_Suertuda_vote40|&2ideal_para_romper_tierras_tipo|&2arcilla,_grava,_nieve_recomendada|&2para_excavadores|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &aPala Suertuda Vote40 &acomo recompensa diaria)'
+            - 'cmd:(/give {player} diamond_pickaxe 1 efficiency:40 durability:40 silk_touch:1 name:&2Pico_Sedoso_Vote40 lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(3),display:(diamond_pickaxe 1 efficiency:40 durability:40 silk_touch:1 name:&2Pico_Sedoso_Vote40 lore:_|&6&LRareza:&5&lMÍSTICA|_|&2Gana_1_Pico_Sedoso_vote40|&2ideal_para_minar_con_delicadeza|&2piedra_ores_vidrio_linternas_etc|&2recomendada_para_Mineria|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &2Pico Sedoso Vote40 &acomo recompensa diaria)'
+            - 'cmd:(/give {player} diamond_axe 1 efficiency:40 durability:40 silk_touch:1 name:&2Hacha_Sedosa_Vote40 lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(3),display:(diamond_axe 1 efficiency:40 durability:40 silk_touch:1 name:&2Hacha_Sedosa_Vote40 lore:_|&6&LRareza:&5&lMÍSTICA|_|&2Gana_1_Hacha_Sedosa_Vote40|&2ideal_para_talar_bosques_enteros|&2bosques_carmesi_y_distosionados|&2recomendada_para_Leñadores|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &2Hacha Sedosa Vote40 &acomo recompensa diaria)'
+            - 'cmd:(/give {player} diamond_shovel 1 efficiency:40 durability:40 silk_touch:1 name:&2Pala_Sedosa_Vote40 lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(5),display:(diamond_shovel 1 efficiency:40 durability:40 silk_touch:1 name:&2Pala_Sedosa_Vote40 lore:_|&6&LRareza:&5&lMÍSTICA|_|&2Gana_1_Pala_Sedosa_Vote40|&2ideal_para_romper_tierras_tipo|&2micelio_podzol_pasto_grava_farmland|&2sin_que_pierdan_su_forma_original|&2recomendada_para_excavadores|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &2Pala Sedosa Vote40 &acomo recompensa diaria)'
+            - 'cmd:(/give {player} diamond_hoe 1 efficiency:40 durability:40 name:&2Hazada_Vote40 lore:&5Ganado_como_recompensa_al|&5votar_por_el_servidor|&2Survival_&4Rolemine||&bCiudades_OP),unique:(),chance:(5),display:(diamond_hoe 1 efficiency:40 durability:40 name:&2Hazada_Vote40 lore:_|&6&LRareza:&5&lMÍSTICA|_|&2Gana_1_Hazada_OP_vote40_OP|&2ideal_para_preparar_tierras_de|&2cultivos_cosechar_en_bosques|&2distorsionados_y_camesi|&2recomendada_para_campesinos|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &2Hazada OP Vote40 &acomo recompensa diaria)'
+            - 'cmd:(/cr give to {player} Vote40 1),unique:(),chance:(5),display:(TRIPWIRE_HOOK 1 name:&2[_&aLlave_&eVote40_&2] lore:_|&6&LRareza:&5&lMÍSTICA|_|&2Gana_1_llave_vote40_y_canjeala|&2en_la_crate_en_el_/spawn|&2Si_tienes_suerte_podras_podras|&2llevarte_más_llaves_o_algo_OP|No_es_crafteable glow:true), broadcast:(&aFelicidades a &l{player} &aganó 1 &eLlave &e&lVote40 &acomo recompensa diaria)'
+            - 'cmd:(/cr give to {player} Vote40 3),unique:(),chance:(3),display:(TRIPWIRE_HOOK 3 name:&2[_&aLlave_&eVote40_&2] lore:_|&6&LRareza:&5&lMÍSTICA|_|&2Gana_3_llaves_vote40_y_canjeala|&2en_la_crate_en_el_/spawn|&2Si_tienes_suerte_podras_podras|&2llevarte_más_llaves_o_algo_OP|No_es_crafteable glow:true), broadcast:(&aFelicidades a &l{player} &aganó 3 &eLlaves &e&lVote40 &acomo recompensa diaria)'
+            - 'cmd:(/cr give to {player} Vote40 5),unique:(),chance:(2),display:(TRIPWIRE_HOOK 5 name:&2[_&aLlave_&eVote40_&2] lore:_|&6&LRareza:&5&lMÍSTICA|_|&2Gana_5_llaves_vote40_y_canjeala|&2en_la_crate_en_el_/spawn|&2Si_tienes_suerte_podras_podras|&2llevarte_más_llaves_o_algo_OP|No_es_crafteable glow:true), broadcast:(&aFelicidades a &l{player} &aganó 5 &eLlaves &e&lVote40 &acomo recompensa diaria)'
+
+
+# -------------------------------------------------------------------------------------------------------------------
+###############Crate para el Koth de Ciudades OP
+Koth:
+    type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
+    item: 'TRIPWIRE_HOOK 1 name:&2[_&aLlave_&4KoTH_&2] lore:&7Capturaste_el_KoTH.|_|&aHaz_clic_derecho_en_el_cofre|&2KoTH_Loot_para_ganar|&2un_premio.!|_|&bCiudades_OP glow:true'
+    display-name: '&2[ &aLlave &4KoTH &2]'
+    holographic:
+        - '{crate-name}'
+        - '{lore:2}'
+    confirmation:
+        enabled: true
+        accept-button: 'LIME_CONCRETE 1 name:&aAbrir lore:&fClic_aquí_para_abrir_{crate}!'
+        decline-button: 'RED_CONCRETE 1 name:&4Cancelar'
+    preview:
+        enabled: true
+        rows: 3
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        open: '&e{player} Has cobrado una recompensa en el cofre &a&l{crate}'
+        broadcast: '&aFelicidades a &6&l{player} &a ganado una recompenda del KoTH y cosas más, ahora brilla como un dios miralo en &l/spawn.'
+    effect:
+        1:
+          class: Sphere
+          category: PERSISTENT
+          radius: 2.5
+          particles: 10
+        2:
+          class: Sound
+          sound: ENTITY_PLAYER_LEVELUP
+        3:
+          class: Sound
+          sound: ENTITY_ENDERMEN_TELEPORT
+          CATEGORY: END
+    reward:
+        minimum-rewards: 1
+        maximum-rewards: 3
+        rewards:
+            - 'cmd:(effect give {player} glowing 1200 1),unique:(),always:(), display:(player_head 1 name:&f¡Luminisencia! lore:&9Luminicencia_II_(20:00)|_|&2Brillarás_y_todos_lo_verán|&2sabrán_que_tu_ganaste|&2un_premio_del_koth|_|&bCiudades_OP glow:true)'
+            - 'cmd:(give {player} golden_helmet 1 protection:30 durability:20 thorns:3 name:&eCasco_Peruano),unique:(),chance:(7),display:(golden_helmet 1 protection:30 durability:20 thorns:3 name:&eCasco_Peruano lore:_|&8Rareza:_&3&lPARTICULAR|_|&2Gana_1_Casco_de_malla_OP|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &eCasco Peruano &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} golden_chestplate 1 protection:30 durability:20 thorns:3 name:&ePechera_Peruana),unique:(),chance:(7),display:(golden_chestplate 1 protection:30 durability:20 thorns:3 name:&ePechera_Peruana lore:_|&8Rareza:_&3&lPARTICULAR|_|&2Gana_1_Pechera_de_malla_OP|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_encantable|_|&bCiudades_OP glow:false glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1  &ePechera Peruana &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} golden_leggings 1 protection:30 durability:20 thorns:3 name:&ePantalon_Peruano),unique:(),chance:(7),display:(golden_leggings 1 protection:30 durability:20 thorns:3 name:&ePantalon_Peruano lore:_|&8Rareza:_&3&lPARTICULAR|_|&2Gana_1_Pantalón_de_malla_OP|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &ePantalon Peruano &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} golden_boots 1 protection:30 durability:20 thorns:3 name:&eBotas_Peruanas),unique:(),chance:(7),display:(golden_boots 1 protection:30 durability:20 thorns:3 name:&eBotas_Peruanas lore:_|&8Rareza:_&3&lPARTICULAR|_|&2Gana_1_Botas_de_malla_OP|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &eBotas Peruanas &acomo recompensa del KoTH)'
+
+            - 'cmd:(give {player} chainmail_helmet 1 protection:30 durability:30 thorns:3 name:&7Casco_Borinken),unique:(),chance:(5),display:(chainmail_helmet 1 protection:30 durability:20 thorns:3 name:&7Casco_Borinken lore:_|&8Rareza:_&5&lÉPICA|_|&2Gana_1_Casco_Borinken|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &7Casco Borinken &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} chainmail_chestplate 1 protection:30 durability:20 thorns:3 name:&7Pechera_Borinken),unique:(),chance:(5),display:(chainmail_chestplate 1 protection:30 durability:20 thorns:3 name:&7Pechera_Borinken lore:_|&8Rareza:_&5&lÉPICA|_|&2Gana_1_Pechera_Borinken|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &7Pechera Borinken &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} chainmail_leggings 1 protection:30 durability:20 thorns:3 name:&7Pantalones_Borinken),unique:(),chance:(5),display:(chainmail_leggings 1 protection:30 durability:20 thorns:3 name:&7Pantalones_Borinken lore:_|&8Rareza:_&5&lEPICA|_|&2Gana_1_Pantalon_Borinken|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &7Pantalon Borinken &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} chainmail_boots 1 protection:30 durability:20 thorns:3 name:&7Botas_Borinken),unique:(),chance:(5),display:(chainmail_boots 1 protection:30 durability:20 thorns:3 name:&7Botas_Borinken lore:_|&8Rareza:_&5&lÉPICA|_|&2Gana_1_Botas_Borinken|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &7Botas Borinken &acomo recompensa del KoTH)'
+
+            - 'cmd:(give {player} iron_helmet 1 protection:30 durability:20 thorns:3 name:&6Casco_Xinontecatl),unique:(),chance:(3),display:(iron_helmet 1 protection:30 durability:20 thorns:3 name:&6Casco_Xinontecatl lore:_|&8Rareza:_&5&lÉPICA|_|&2Gana_1_Casco_Xicohtencatl|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_crafteable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &6Casco Xinontecatl &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} iron_chestplate 1 protection:30 durability:20 thorns:3 name:&6Pechera_Xinontecatl),unique:(),chance:(3),display:(iron_chestplate 1 protection:30 durability:20 thorns:3 name:&6Pechera_Xinontecatl lore:_|&8Rareza:_&5&lÉPICA|_|&2Gana_1_Pechera_Xicohtencatl|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_crafteable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &6Pechera Xinontecatl &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} iron_leggings 1 protection:30 durability:20 thorns:3 name:&6Pantalones_Xinontecatl),unique:(),chance:(3),display:(iron_leggings 1 protection:30 durability:20 thorns:3 name:&6Pantalones_Xinontecatl lore:_|&8Rareza:_&5&lEPICA|_|&2Gana_1_Pantalon_Xicohtencatl|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_crafteable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &6Pantalones Xinontecatl &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} iron_boots 1 protection:30 durability:30 thorns:3 name:&6Botas_Xinontecatl),unique:(),chance:(3),display:(iron_boots 1 protection:30 durability:20 thorns:3 name:&6Botas_Xinontecatl lore:_|&8Rareza:_&5&lÉPICA|_|&2Gana_1_Botas_Xicohtencatl|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_crafteable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &6Botas Xinontecatl &acomo recompensa del KoTH)'
+
+            - 'cmd:(give {player} diamond_helmet 1 protection:30 durability:20 thorns:3 name:&2Casco_Quetzalcoatl),unique:(),chance:(1),display:(diamond_helmet 1 protection:30 durability:20 thorns:3 name:&bCasco_Quetzalcoatl lore:_|&8Rareza:_&9&lÉPICA|_|&2Gana_1_Casco_Quetzalcoatl|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó &bCasco Quetzalcoatl &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} diamond_chestplate 1 protection:30 durability:20 thorns:3 name:&2Pechera_Quetzalcoatl),unique:(),chance:(1),display:(diamond_chestplate 1 protection:30 durability:20 thorns:3 name:&bPechera_Quetzalcoatl lore:_|&8Rareza:_&9&lÉPICA|_|&2Gana_1_Pechera__Quetzalcoatl|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó  &bPechera Quetzalcoatl &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} diamond_leggings 1 protection:30 durability:20 thorns:3 name:&2Pantalones_Quetzalcoatl),unique:(),chance:(1),display:(diamond_leggings 1 protection:30 durability:20 thorns:3 name:&bPantalones_Quetzalcoatl lore:_|&8Rareza:_&9&lÉPICA|_|&2Gana_1_Pantalon__Quetzalcoatl|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó  &bPantalones Quetzalcoatl &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} diamond_boots 1 protection:30 durability:20 thorns:3 name:&2Botas_Quetzalcoatl),unique:(),chance:(1),display:(diamond_boots 1 protection:30 durability:20 thorns:3 name:&bBotas_Quetzalcoatl lore:_|&8Rareza:_&9&lÉPICA|_|&2Gana_1_Botas__Quetzalcoatl|&2usalo_para_pvpear_en_nuestros|&2warp_de_pvp_o_en_las_ciudades|&2con_arenas_pvp.|_|No_es_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó &bBotas Quetzalcoatl &acomo recompensa del KoTH)'
+            - 'cmd:(give {player} diamond_sword 1 sharpness:40 durability:20 fire_aspect:20 name:&2Asesina_de_{player}),unique:(),chance:(1),display:(diamond_sword 1 sharpness:50 durability:30 fire_aspect:20 name:&bAsesina_de_{player} lore:_|&8Rareza:_&5&lÉPICA|_|&2Gana_1_Espada_de_diamante_OP_|&2ideal_para_las_batallas|&2recomendada_para_TF|_|No_es_crafteable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó la &bAsesina de {player} &acomo recompensa del KoTH)'
+
+            - 'cmd:(/give {player} golden_apple 32),unique:(),chance:(24),display:(golden_apple 32 lore:_|&8Rareza:_&5&lMÍSTICA|_|&2Gana_32_Manzanas_doradas_con_ellas|&2podrás_tener_efectos_por|&2corto_tiempo_aprovechalas|_|Revisa_tu_libro_de_recetas|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 32 &bManzanas Doradas &acomo recompensa del KoTH)'
+            - 'cmd:(/give {player} enchanted_golden_apple 8 name:&5Manzanitas_Chetas),unique:(),chance:(9),display:(enchanted_golden_apple 8 name:&5Manzanitas_Chetas lore:_|&8Rareza:_&5&lMÍSTICA|_|&2Gana_8_Manzanas_de_oro_encantadas|&2con_ellas_podrás_tener_efectos_por|&2corto_tiempo_aprovechalas|_|No_es_crafteable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 8 &5Manzanitas Chetitas &acomo recompensa del KoTH)'
+            - 'cmd:(/give {player} enchanted_golden_apple 16 name:&5Manzanitas_Chetas),unique:(),chance:(5),display:(enchanted_golden_apple 16 name:&5Manzanitas_Chetas lore:_|&8Rareza:_&5&lMÍSTICA|_|&2Gana_16_Manzanas_de_oro_encantadas|&2con_ellas_podrás_tener_efectos_por|&2corto_tiempo_aprovechalas|_|No_es_crafteable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 16 &5Manzanitas Chetitas &acomo recompensa del KoTH)'
+            - 'cmd:(/give {player} enchanted_golden_apple 32 name:&5Manzanitas_Chetas),unique:(),chance:(3),display:(enchanted_golden_apple 32 name:&5Manzanitas_Chetas lore:_|&8Rareza:_&5&lMÍSTICA|_|&2Gana_32_Manzanas_de_oro_encantadas|&2con_ellas_podrás_tener_efectos_por|&2corto_tiempo_aprovechalas|_|No_es_crafteable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 32 &5Manzanitas Chetitas &acomo recompensa del KoTH)'
+            - 'cmd:(/give {player} enchanted_golden_apple 64 name:&5Manzanitas_Chetas),unique:(),chance:(1),display:(enchanted_golden_apple 64 name:&5Manzanitas_Chetas lore:_|&8Rareza:_&5&lMÍSTICA|_|&2Gana_64_Manzanas_de_oro_encantadas|&2con_ellas_podrás_tener_efectos_por|&2corto_tiempo_aprovechalas|_|No_es_crafteable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 64 &5Manzanitas Chetitas &acomo recompensa del KoTH)'
+
+            - 'cmd:(/give {player} diamond_sword 1 bane_of_arthropods:40 durability:30 fire_aspect:30 looting:3 name:&5Anania_Exumai),unique:(),chance:(.9),display:(diamond_sword 1 bane_of_arthropods:40 durability:30 fire_aspect:30 looting:3 name:&5Arania_Exumai lore:_|&8Rareza:_&5&lMÍSTICA|_|&2Gana_1_Arania_Exumai|&2ideal_para_el_farmeo_aracnido|&2recomendada_para_matar_arañas|&2de_un_solo_tajo_recuerda_usar|&b/jobs_join_soldado|&2para_ganar_dinero_cada_5_min.|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó &5Anania Exumai &acomo recompensa diaria)'
+            - 'cmd:(/give {player} diamond_sword 1 smite:40 durability:30 fire_aspect:30 looting:3 name:&3Punishera),unique:(),chance:(.9),display:(diamond_sword 1 smite:40 durability:30 fire_aspect:30 looting:3 name:&3Punishera lore:_|&8Rareza:_&5&lMÍSTICA|_|&2Gana_1_Punishera|&2ideal_para_el_farmeo_mortuario|&2recomendada_para_matar_muertos|&2de_un_solo_tajo_recuerda_usar|&b/jobs_join_soldado|&2para_ganar_dinero_cada_5_min.|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó La &3Punishera &acomo recompensa diaria)'
+            - 'cmd:(/give {player} diamond_sword 1 sharpness:40 durability:30 fire_aspect:30 looting:3 name:&dMatancera),unique:(),chance:(.8),display:(diamond_sword 1 sharpness:40 durability:30 fire_aspect:30 looting:3 name:&dMatancera lore:_|&8Rareza:_&9&lÉPICA|_|&2Gana_1_Matancera|&2ideal_para_las_batallas|&2recomendada_para_TF|_|No_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &dMatancera &acomo recompensa diaria)'
+            - 'cmd:(/give {player} diamond_sword 1 sharpness:50 smite:50 bane_of_arthropods:50 durability:30 fire_aspect:30 looting:4 vanishing_curse:1 name:&6La_Farmeadora_OP_Vote40),unique:(),chance:(.7),display:(diamond_sword 1 sharpness:50 smite:50 bane_of_arthropods:50 durability:30 fire_aspect:30 looting:4 vanishing_curse:1 name:&6La_Farmeadora lore:_|&8Rareza:_&5&lMÍSTICA|_|&2Gana_1_Espada_Farmeadora|&2ideal_para_el_farmeo|&2recomendada_para_farmear_xp|&2matando_todo_tipo_de_mobs|&o_matar_a_gente_en_batalllas|_|No_es_encantable|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó &6La Farmeadora &acomo recompensa diaria)'
+
+            - 'cmd:(/give {player} potion 1 8193 {CustomPotionEffects:[{Id:1,Amplifier:1,Duration:1800},{Id:5,Amplifier:1,Duration:1800}],display:{Name:"\"§5Pocion Multijugos\""}}),unique:(),chance:(15),display:(potion 1 name:&5Pocion_Multijugos effect:speed power:2 duration:90 effect:strength power:2 duration:90 lore:_|&8Rareza:_&9&lÉPICA|_|&2Gana_1_Poción_Multijugos|&2usala_con_sabiduria_ya_que|&2son_practicamente_inexistentes|&2creadas_por_los_alquimistas|&2de_las_dungueons_los_piglin|&2son_mas_listos_de_lo_que_crees|_|No_es_crafteable.|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &5Poción Multijugos 1:30 &acomo recompensa diaria)'
+            - 'cmd:(/give {player} potion 1 8193 {CustomPotionEffects:[{Id:1,Amplifier:1,Duration:2400},{Id:5,Amplifier:1,Duration:2400}],display:{Name:"\"§5Pocion Multijugos 120\""}}),unique:(),chance:(10),display:(potion 1 name:&5Pocion_Multijugos effect:speed power:2 duration:120 effect:strength power:2 duration:120 lore:_|&8Rareza:_&5&lMÍSTICA|_|&2Gana_1_Poción_Multijugos|&2usala_con_sabiduria_ya_que|&2son_practicamente_inexistentes|&2creadas_por_los_alquimistas|&2de_las_dungueons_los_piglin|&2son_mas_listos_de_lo_que_crees|_|No_es_crafteable.|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &5Poción Multijugos 2:00 &acomo recompensa diaria)'
+            - 'cmd:(/give {player} potion 1 8193 {CustomPotionEffects:[{Id:1,Amplifier:1,Duration:4800},{Id:5,Amplifier:1,Duration:4800}],display:{Name:"\"§5Pocion Multijugos 240\""}}),unique:(),chance:(8),display:(potion 1 name:&5Pocion_Multijugos effect:speed power:2 duration:240 effect:strength power:2 duration:240 lore:_|&8Rareza:_&B&lULTRAINSTINTO|_|&2Gana_1_Poción_Multijugos|&2usala_con_sabiduria_ya_que|&2son_practicamente_inexistentes|&2creadas_por_los_alquimistas|&2de_las_dungueons_los_piglin|&2son_mas_listos_de_lo_que_crees|_|No_es_crafteable.|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &5Poción Multijugos 4:00 &acomo recompensa diaria)'
+
+            - 'cmd:(/give {player} potion 1 8200 {CustomPotionEffects:[{Id:5,Amplifier:1,Duration:1800},{Id:1,Amplifier:1,Duration:1800},{Id:10,Amplifier:3,Duration:600},{Id:23,Amplifier:5,Duration:200}],display:{Name:"\"§fPulque Supremo\""}}),unique:(),chance:(3),display:(potion 1 name:&fPulque_Supremo effect:strength power:2 duration:90 effect:speed power:2 duration:90 effect:regeneration power:3 duration:10 effect:saturation power:5 duration:10 lore:_|&8Rareza:_&B&lULTRAINSTINTO|_|&2Gana_1_Pulque_Supremo|&2usala_con_sabiduria_ya_que|&2es_practicamente_inexistente|&2creada_por_los_dioses_mexicas|&2extraida_desde_la_madre|&2mayaguel_para_los_valientes|_|No_es_crafteable.|_|&bCiudades_OP glow:false), broadcast:(&aFelicidades a &l{player} &aganó 1 &fPulque Supremo 1:30 &acomo recompensa diaria)'
+
+# -------------------------------------------------------------------------------------------------------------------
+FoodChest:
+    type: SUPPLYCRATE # Place a chest down, and the chest will be filled with items
+    item: 'CHEST 1 name:&c[&6Foodie_&eChest&c]_&f#124 lore:&7Mmmm,_something_smells_good.|&8Place_the_chest_down_to_obtain_a_pack_of_food! glow:true'
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        open: '{p}You have opened a &c[&6Foodie &eChest&c] &f#124'
+        broadcast: ''
+    effect:
+        1:
+          class: AtomEffect
+          radius: 1
+          iterations: 30
+        2:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
+    reward:
+        minimum-rewards: 8
+        maximum-rewards: 15
+        rewards:
+            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
+            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
+            - 'unique:(),     chance:(1),          item:(apple 1)'
+            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
+            - 'unique:(),     chance:(1),          item:(bone 1)'
+            - 'unique:(),     chance:(1),          item:(bread 1)'
+            - 'unique:(),     chance:(1),          item:(melon_slice 1)'
+            - 'unique:(),     chance:(1),          item:(ice 1)'
+            - 'unique:(),     chance:(1),          item:(snow 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(dirt 1)'
+            - 'unique:(),     chance:(1),          item:(sand 1)'
+            - 'unique:(),     chance:(1),          item:(birch_log 1)'
+            - 'unique:(),     chance:(1),          item:(cobweb 1)'
+            - 'unique:(),     chance:(1),          item:(porkchop 1)'
+            - 'unique:(),     chance:(1),          item:(beef 1)'
+            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_stew 1)'
+# -------------------------------------------------------------------------------------------------------------------
+FoodPack:
+    type: MYSTERYCRATE # Right, or left click to receive rewards
+    item: 'minecart 1 name:&c[&6Foodie_&ePack&c]_&f#125 lore:&7Mmmm,_something_smells_good.|&8Right_click_to_receive_a_pack_of_food! glow:true'
+    confirmation:
+        enabled: true
+        accept-button: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'RED_STAINED_GLASS_PANE 1 name:&4No'
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        open: '{p}You have opened a &c[&6Foodie &ePack&c] &f#125'
+        broadcast: ''
+    effect:
+        1:
+          class: HeartEffect
+        2:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
+    reward:
+        minimum-rewards: 3
+        maximum-rewards: 3
+        rewards:
+            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
+            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
+            - 'unique:(),     chance:(1),          item:(apple 1)'
+            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
+            - 'unique:(),     chance:(1),          item:(bone 1)'
+            - 'unique:(),     chance:(1),          item:(bread 1)'
+            - 'unique:(),     chance:(1),          item:(melon_slice 1)'
+            - 'unique:(),     chance:(1),          item:(ice 1)'
+            - 'unique:(),     chance:(1),          item:(snow 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(dirt 1)'
+            - 'unique:(),     chance:(1),          item:(sand 1)'
+            - 'unique:(),     chance:(1),          item:(birch_log 1)'
+            - 'unique:(),     chance:(1),          item:(cobweb 1)'
+            - 'unique:(),     chance:(1),          item:(porkchop 1)'
+            - 'unique:(),     chance:(1),          item:(beef 1)'
+            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_stew 1)'
+# -------------------------------------------------------------------------------------------------------------------
+FoodKey:
+    type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
+    item: 'NETHER_STAR 1 name:&c[&6Foodie_Key&c]_&f#1 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
+    animation: 'none'
+    display-name: '&c[&6Foodie Key&c] &f#1'
+    holographic:
+        - '{crate-name}'
+        - '{lore:1}'
+    confirmation:
+        enabled: true
+        accept-button: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'RED_STAINED_GLASS_PANE 1 name:&4No'
+    preview:
+        enabled: true
+        rows: 2
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        open: '{p}You have opened a {crate}'
+        broadcast: ''
+    effect:
+        1:
+          class: Original
+          category: PERSISTENT
+        2:
+          class: Sound
+          category: OPEN
+          sound: ENTITY_BAT_TAKEOFF
+    reward:
+        minimum-rewards: 3
+        maximum-rewards: 3
+        rewards:
+            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
+            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
+            - 'unique:(),     chance:(1),          item:(apple 1)'
+            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
+            - 'unique:(),     chance:(1),          item:(bone 1)'
+            - 'unique:(),     chance:(1),          item:(bread 1)'
+            - 'unique:(),     chance:(1),          item:(melon_slice 1)'
+            - 'unique:(),     chance:(1),          item:(ice 1)'
+            - 'unique:(),     chance:(1),          item:(snow 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(dirt 1)'
+            - 'unique:(),     chance:(1),          item:(sand 1)'
+            - 'unique:(),     chance:(1),          item:(birch_log 1)'
+            - 'unique:(),     chance:(1),          item:(cobweb 1)'
+            - 'unique:(),     chance:(1),          item:(porkchop 1)'
+            - 'unique:(),     chance:(1),          item:(beef 1)'
+            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_stew 1)'
+# -------------------------------------------------------------------------------------------------------------------
+# An example of a key crate with animations (Roulette)
+FoodKeyT2:
+    type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
+    item: 'NETHER_STAR 1 name:&c[&6Foodie_&eKey&c]_&f#2 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
+    animation: 'ROULETTE'
+    display-name: '&c[&6Foodie Crate&c] &f#2'
+    holographic:
+        - '{crate-name}'
+        - '{lore:1}'
+    confirmation:
+        enabled: true
+        accept-button: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'RED_STAINED_GLASS_PANE 1 name:&4No'
+    preview:
+        enabled: true
+        rows: 2
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        open: '{p}You have opened a {crate}'
+        broadcast: ''
+    effect:
+        1:
+          class: Original
+          category: PERSISTENT
+        2:
+          class: Sound
+          category: ANIMATION
+          sound: BLOCK_WOOD_PLACE
+        3:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
+          CATEGORY: END
+    reward:
+        minimum-rewards: 1
+        maximum-rewards: 1
+        rewards:
+            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
+            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
+            - 'unique:(),     chance:(1),          item:(apple 1)'
+            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
+            - 'unique:(),     chance:(1),          item:(bone 1)'
+            - 'unique:(),     chance:(1),          item:(bread 1)'
+            - 'unique:(),     chance:(1),          item:(melon_slice 1)'
+            - 'unique:(),     chance:(1),          item:(ice 1)'
+            - 'unique:(),     chance:(1),          item:(snow 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(dirt 1)'
+            - 'unique:(),     chance:(1),          item:(sand 1)'
+            - 'unique:(),     chance:(1),          item:(birch_log 1)'
+            - 'unique:(),     chance:(1),          item:(cobweb 1)'
+            - 'unique:(),     chance:(1),          item:(porkchop 1)'
+            - 'unique:(),     chance:(1),          item:(beef 1)'
+            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_stew 1)'
+# -------------------------------------------------------------------------------------------------------------------
+# An example of a key crate with animations (CSGO)
+FoodKeyT3:
+    type: KEYCRATE # Set this crate to a block, and players may right click the block to use "keys"
+    item: 'NETHER_STAR 1 name:&c[&6Foodie_&eKey&c]_&f#3 lore:&7Mmmm,_something_smells_good.|&8Right_click_a_chest_to_receive_a_pack_of_food! glow:true'
+    animation: 'CSGO'
+    display-name: '&c[&6Foodie Key&c] &f#3'
+    holographic:
+        - '{crate-name}'
+        - '{lore:1}'
+    confirmation:
+        enabled: true
+        accept-button: 'GREEN_STAINED_GLASS_PANE 1 name:&aYes lore:&fClick_here_to_open_{crate}!'
+        decline-button: 'RED_STAINED_GLASS_PANE 1 name:&4No'
+    preview:
+        enabled: true
+        rows: 2
+    buy:
+        enabled: false
+        cost: 0
+    message:
+        open: '{p}You have opened a {crate}'
+        broadcast: ''
+    effect:
+        1:
+          class: Original
+          category: PERSISTENT
+        2:
+          class: Sound
+          category: ANIMATION
+          sound: BLOCK_WOOD_PLACE
+        3:
+          class: Sound
+          sound: ENTITY_BAT_TAKEOFF
+          CATEGORY: END
+    reward:
+        minimum-rewards: 1
+        maximum-rewards: 1
+        rewards:
+            - 'unique:(),     always:(),           cmd:(heal {player}), display:(gold_block 1 name:&fHeal! lore:&r&eOpen_for_an_instant_heal! glow:true)'
+            - 'unique:(),     chance:(1),          item:(cake 1 name:&fThe_cake_is_a_lie!)'
+            - 'unique:(),     chance:(1),          item:(apple 1)'
+            - 'unique:(),     chance:(1),          item:(golden_apple 1)'
+            - 'unique:(),     chance:(1),          item:(bone 1)'
+            - 'unique:(),     chance:(1),          item:(bread 1)'
+            - 'unique:(),     chance:(1),          item:(melon_slice 1)'
+            - 'unique:(),     chance:(1),          item:(ice 1)'
+            - 'unique:(),     chance:(1),          item:(snow 1)'
+            - 'unique:(),     chance:(1),          item:(melon 1)'
+            - 'unique:(),     chance:(1),          item:(dirt 1)'
+            - 'unique:(),     chance:(1),          item:(sand 1)'
+            - 'unique:(),     chance:(1),          item:(birch_log 1)'
+            - 'unique:(),     chance:(1),          item:(cobweb 1)'
+            - 'unique:(),     chance:(1),          item:(porkchop 1)'
+            - 'unique:(),     chance:(1),          item:(beef 1)'
+            - 'unique:(),     chance:(1),          item:(cooked_beef 1)'
+            - 'unique:(),     chance:(1),          item:(mushroom_stew 1)'
