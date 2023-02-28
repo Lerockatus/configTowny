@@ -1,0 +1,171 @@
+#==============================================================#
+##
+## Revisión para ROLEMINE 2020-08-05
+##
+#==============================================================#
+
+MainInventory: MainInventory
+Inventorys:
+    MainInventory:
+        Name: "&b&lLotería"
+        Size: 27
+        Items:
+            DrawTime:
+                ItemType: "clock"
+                Type: INFO
+                Name: "&bSorteo: %draw%"
+                Slot: 0
+            InPot:
+                ItemType: "bucket"
+                Type: INFO
+                Name: "&bIn Acumulado: &c%pot%"
+                Slot: 2
+                Lore:
+                - "&bTus boletos: &c%ptickets%"
+                - "&bTotal boletos: &c%gtickets%"
+            LastWin:
+                ItemType: "oak_sign"
+                Type: INFO
+                Name: "&bÚltimo ganador: &c%winner%"
+                Slot: 4
+            BuyTickets:
+                ItemType: "diamond"
+                Type: INVENTORYOPEN
+                InventoryToOpen: BuyInventory
+                Name: "&bCompra boletos de lotería"
+                Slot: 6
+            GlobalTickets:
+                ItemType: "chest"
+                Type: INVENTORYOPEN
+                InventoryToOpen: GlobalTickets
+                Name: "&bMostrar todos los jugadores"
+                Slot: 8
+            ToggleRemind:
+                ItemType: "lime_dye"
+                Type: COMMANDPLAYER
+                Name: "&bAlternar mensaje de recordatorio"
+                Slot: 21
+                Commands:
+                - "lottery toggleremindmsg"
+            ToggleBuy:
+                ItemType: "lime_dye"
+                Type: COMMANDPLAYER
+                Name: "&bAlternar Mensaje de compra global"
+                Slot: 23
+                Commands:
+                - "lottery togglebuymsg"
+    BuyInventory:
+        Name: "&bComprar boletos de lotería"
+        Size: 27
+        Items:
+            Buy1:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bCompra &6&l1 &bboletos de lotería"
+                Slot: 1
+                Commands:
+                - "lottery buy 1"
+            Buy2:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bcompra &6&l2 &bboletos de lotería"
+                Slot: 2
+                Commands:
+                - "lottery buy 2"
+            Buy4:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bcompra &6&l4 &bboletos de lotería"
+                Slot: 3
+                Commands:
+                - "lottery buy 4"
+            Buy6:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bcompra &6&l6 &bboletos de lotería"
+                Slot: 4
+                Commands:
+                - "lottery buy 6"
+            Buy8:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bcompra &6&l8 &bboletos de lotería"
+                Slot: 5
+                Commands:
+                - "lottery buy 8"
+            Buy10:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bcompra &6&l10 &bboletos de lotería"
+                Slot: 6
+                Commands:
+                - "lottery buy 10"
+            Buy20:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bcompra &6&l20 &bboletos de lotería"
+                Slot: 10
+                Commands:
+                - "lottery buy 20"
+            Buy30:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bCompra &6&l30 &bboletos de lotería"
+                Slot: 11
+                Commands:
+                - "lottery buy 30"
+            Buy40:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bCompra &6&l40 &bboletos de lotería"
+                Slot: 12
+                Commands:
+                - "lottery buy 40"
+            Buy50:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bCompra &6&l50 &bboletos de lotería"
+                Slot: 13
+                Commands:
+                - "lottery buy 50"
+            Buy60:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bCompra &6&l60 &bboletos de lotería"
+                Slot: 14
+                Commands:
+                - "lottery buy 60"
+            Buy70:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bCompra &6&l70 &bboletos de lotería"
+                Slot: 15
+                Commands:
+                - "lottery buy 70"
+            Buy80:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bCompra &6&l80 &bboletos de lotería"
+                Slot: 19
+                Commands:
+                - "lottery buy 80"
+            Buy90:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bCompra &6&l90 &bboletos de lotería"
+                Slot: 20
+                Commands:
+                - "lottery buy 90"
+            Buy100:
+                ItemType: "paper"
+                Type: COMMANDPLAYER
+                Name: "&bCompra &6&l100 &bboletos de lotería"
+                Slot: 21
+                Commands:
+                - "lottery buy 100"
+            BackButton:
+                ItemType: "redstone_block"
+                Type: INVENTORYOPEN
+                InventoryToOpen: MainInventory
+                Name: "&cRegresar al menú principal"
+                Slot: 17

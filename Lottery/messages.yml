@@ -1,0 +1,59 @@
+Prefix: '&2&lRolemine '
+NoPermission: '&cNo tienes permiso para hacer eso!'
+Buy: '&aCompraste &6%tickets% &aboletos de lotería!'
+GlobalBuy: '&6%player% &acompró &6%tickets% &aboletos de lotería!'
+NoMoney: '&cNo tienes suficiente dinero para comprar &6&l%tickets% &cboletos. Tu necesitas
+  &6&l%money% &cde dinero para comprar &6&l%tickets% &cboletos.'
+TicketLimit: '&c&lNo puedes comprar más boletos!'
+Cooldown: '&cRelajate! Puedes comprar entradas nuevamente en &6&l%time% &csegundos'
+Win: '&a¡Felicitaciones a &6%player% &apor ser el ganador de &b&l$%money% &apesos
+  en la lotería'
+NoWinnerText: '&cNadie'
+NoPlayers: '&cNo se vendieron boletos.'
+FewPlayers: '&cNo había suficientes jugadores para que la Lotería corriera!'
+NotOnline: '&cEl ganador %player% no está en línea y no pudo ganar.'
+LoginWinMessage: '&a¡Felicidades! ganaste &b&l$%moneygot% (sin impuestos $%moneynotax%)
+  &aen la lotería donde participaste por última vez!'
+BlockedWorld: '&cEl ganador &l%player% &cestá en un mundo bloqueado y no pudo ganar.'
+BackToPot: '&6¡Nadie ganó! &b&l$%newpot% &6se agregó nuevamente al bote!'
+Reminder: '&a¡La lotería se sorteará en, &6&l%draw% &aminutos! premio acumulado: &6&l$%pot%'
+ToggleOFFBuyMessage: '&cYa no recibirá ningún mensaje de compra de otros jugadores!'
+ToggleONBuyMessage: '&aAhora volverás a recibir mensajes de compra de otros jugadores.!'
+ToggleOFFReminderMessage: '&cYa no recibirá ningún mensaje recordatorio!'
+ToggleONReminderMessage: '&aAhora volverá a recibir mensajes recordatorios!'
+TimeTillDrawFormat: '&e%h%&fH &6%m%&fM &2%s%&fS'
+WaitingForDraw: '&cEsperando el sorteo actual.'
+Status:
+- ' '
+- '     &b&lLotería Rolemine'
+- ' '
+- '&aTus boletos: &f%ptickets%'
+- ' '
+- '&aGlobal boletos: &f%gtickets%'
+- ' '
+- '&aAcumulado: &f$%pot%'
+- ' '
+- '&aSorteo en: &f%draw%'
+- ' '
+- '&aÚltimo ganador: &f&l%winner%'
+- ' '
+HelpPage:
+  Users:
+  - §2▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬§4▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+  - §e§o/Lottery help §8- §7Muestra los comandos de loteria
+  - §b§o/Lottery buy (Cant) §8- §7Para comprar boletos de loteria
+  - §b§o/Lottery status §8- §7Para ver el estatus de la loteria
+  - §b§o/Lottery gui §8- §7Usar la interfaz para operar la loteria
+  - §b§o/Lottery toggleremindmsg §8- §7Activa los recordatorios
+  - §b§o/Lottery togglebuymsg §8- §7Activa mensje de compra
+  - §2▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬§4▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+  Admins:
+  - §7===================================
+  - §8[§bLottery§8]
+  - §8[§bLottery§8] §e§l§o/Lottery draw
+  - §8[§bLottery§8]
+  - §8[§bLottery§8] §e§l§o/Lottery reload
+  - §8[§bLottery§8]
+  - §8[§bLottery§8] §e§l§o/Lottery addpot <Number>
+  - §8[§bLottery§8]
+  - §7===================================
